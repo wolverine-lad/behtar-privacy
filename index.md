@@ -6,7 +6,7 @@
 
 ## Who We Are
 
-Behtar: Prompt Improver is a Chrome browser extension that helps you write better prompts on AI chat platforms. This policy explains what information the extension handles, how it handles it, and what rights you have. Developed by Shreyansh Gupta.
+Behtar: Prompt Improver is a Chrome browser extension that helps you write better prompts on AI chat platforms. This policy explains what information the extension handles, how it handles it, and what rights you have. Developed by Behtar.
 
 Questions? Contact us at **shreyiitkgp96@gmail.com**
 
