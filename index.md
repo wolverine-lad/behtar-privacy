@@ -106,4 +106,3 @@ If we make material changes to this policy, we will update the "Last updated" da
 
 **Behtar: Prompt Improver**
 Email: shreyiitkgp96@gmail.com
-Website: https://behtar.app
