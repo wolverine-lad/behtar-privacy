@@ -1,108 +1,44 @@
-# Privacy Policy — Behtar: Prompt Improver
+# Privacy Policy - Behtar: Prompt Improver
 
-**Last updated: March 25, 2026**
+Last updated: April 3, 2026
 
----
+Behtar: Prompt Improver is a browser extension that helps improve prompts before they are sent to AI platforms. This policy explains what data we collect, how we use it, and what we do not do.
 
-## Who We Are
+## What We Collect
 
-Behtar: Prompt Improver is a Chrome browser extension that helps you write better prompts on AI chat platforms. This policy explains what information the extension handles, how it handles it, and what rights you have. Developed by Behtar.
+- **Invite code:** Stored locally on your device. Sent to our relay server to verify access. Not stored on our servers beyond verification.
+- **Install ID:** A random identifier generated on first install, stored locally. Used only to enforce daily usage limits. Never linked to your identity.
+- **Usage analytics:** When you improve a prompt, we log anonymised data including: the AI platform used (e.g. ChatGPT, Claude), the mode (auto, suggest, review), the browser type, prompt length in characters, response time, and an optional quality score. We do not log the content of your prompts.
+- **User actions:** When you accept, reject, or edit an improved prompt, we log the action and time taken. No prompt content is included.
 
-Questions? Contact us at **shreyiitkgp96@gmail.com**
+## What We Do Not Collect
 
----
+- We do not store your prompts or any content you type.
+- We do not collect your name, email address, or any personally identifiable information.
+- We do not sell your data to any third party.
+- We do not use your data for advertising.
 
-## The Short Version
+## How Your Prompts Are Processed
 
-- Your prompts are scored entirely on your device. Nothing leaves your browser just because you typed something.
-- A prompt is only ever sent anywhere if (a) it scores below the weak-prompt threshold and (b) the extension attempts to improve it.
-- We do not collect your name, email, browsing history, or any account information — ever.
-- We do not sell data. We do not run ads. We do not build profiles.
-
----
-
-## What We Collect and Why
-
-### 1. Prompt Text (conditionally, and only when weak)
-
-When you type a prompt on a supported AI platform (ChatGPT, Claude, Gemini, or Perplexity), the extension scores it locally on your device using a lightweight algorithm. No network request is made during scoring.
-
-If the score falls below 65 out of 100 — indicating the prompt is likely too vague or underspecified — and the extension is active in Suggest, Review, or Auto mode, the prompt text is sent to **our relay server** (hosted on Cloudflare Workers) for improvement. The relay forwards the text to the **Anthropic API**, which returns an improved version of the prompt.
-
-**The relay does not log or store your prompt text.** It acts as a pass-through. The improved prompt is returned to your browser and displayed in the extension UI. Nothing is retained on the server after the response is delivered.
-
-If your prompt scores 65 or above, it is never sent anywhere.
-
-### 2. Invite Code
-
-During the unlisted beta phase, access to the extension requires an invite code. The invite code you enter is stored locally in your browser's extension storage (`chrome.storage.local`) to unlock the extension. The invite code is also sent to the relay once at validation time to confirm it is valid. We do not associate your invite code with any personal identity.
-
-### 3. Local Usage Counts
-
-The extension stores a small amount of usage data locally in your browser — for example, how many prompts have been improved in your current session. This data never leaves your device and is used only to drive in-extension UI features (such as showing a usage count badge). It is not transmitted to us or any third party.
-
----
-
-## Usage Analytics
-
-When you interact with the Behtar chip (accepting, dismissing, or rating an improvement), the extension sends a small analytics event to our relay server. This event contains: the action taken (e.g. accepted, dismissed), the platform you were on (e.g. ChatGPT), the mode you had selected, your invite code (as an anonymous identifier), and the time taken to make the decision. This data is used solely for product improvement and is not linked to any personal identity. It is not sold or shared with third parties.
-
----
-
-## What We Do NOT Collect
-
-- No name, email address, or any account credentials
-- No browsing history or URLs visited outside the four supported AI platforms
-- No keystrokes, clipboard contents, or page content beyond the specific prompt input field
-- No device identifiers, IP address logs, or fingerprinting data
-- No payment information (the extension is free)
-
----
+When you trigger an improvement, your prompt is sent to our relay server (hosted on Cloudflare Workers) which forwards it to Anthropic's API (Claude) for rewriting. The improved prompt is returned to you. Prompts are processed in real time and are not stored on our servers.
 
 ## Third-Party Services
 
-### Anthropic API
-When a weak prompt is detected, the text of that prompt is sent to the Anthropic API to generate an improved version. Anthropic's own privacy policy and terms of service govern how they handle data submitted through their API. You can review their policies at [https://www.anthropic.com/legal/privacy](https://www.anthropic.com/legal/privacy).
+- **Anthropic API:** Used to rewrite prompts. Subject to [Anthropic's Privacy Policy](https://www.anthropic.com/legal/privacy).
+- **Cloudflare Workers:** Our relay runs on Cloudflare infrastructure. Subject to [Cloudflare's Privacy Policy](https://www.cloudflare.com/privacypolicy/).
 
-We send only the prompt text — no user identifiers, no account info, and no metadata about who you are.
+## Data Retention
 
-### Cloudflare Workers
-Our relay is hosted on Cloudflare Workers. Cloudflare may collect standard infrastructure-level data (such as request timestamps and region) as part of running their platform. We do not instruct Cloudflare to log prompt content. Cloudflare's privacy policy is available at [https://www.cloudflare.com/privacypolicy/](https://www.cloudflare.com/privacypolicy/).
-
----
-
-## Data Storage
-
-| Data | Where stored | Sent anywhere? |
-|------|-------------|----------------|
-| Prompt score result | In-memory only, discarded immediately | No |
-| Prompt text (weak prompts only) | Not stored — sent transiently to relay | Yes, to relay/Anthropic — not retained |
-| Invite code | `chrome.storage.local` on your device | Once, to validate |
-| Usage counts | `chrome.storage.local` on your device | No |
-
----
+Analytics data is retained for up to 90 days for monitoring and product improvement purposes. No prompt content is retained.
 
 ## Your Rights
 
-- **Access / Delete:** All locally stored data (invite code, usage counts) can be cleared by removing the extension from Chrome. Go to `chrome://extensions`, find Behtar, and click "Remove."
-- **Opt out of improvement:** If you prefer that weak prompts are never sent for improvement, you can disable the extension at any time via the extension popup or `chrome://extensions`.
-- **Contact:** For any privacy questions or requests, email **shreyiitkgp96@gmail.com**. We aim to respond within 7 business days.
-
----
-
-## Children
-
-This extension is not directed at children under 13. We do not knowingly collect any information from children.
-
----
+Since we do not collect personally identifiable information, there is no personal profile to access, correct, or delete. If you have questions, contact us at the email below.
 
 ## Changes to This Policy
 
-If we make material changes to this policy, we will update the "Last updated" date at the top of this page and, where appropriate, provide notice via the extension or our website. Continued use of the extension after changes are posted constitutes your acceptance of the updated policy.
-
----
+We may update this policy from time to time. The "Last updated" date at the top will reflect any changes.
 
 ## Contact
 
-**Behtar: Prompt Improver**
-Email: shreyiitkgp96@gmail.com
+For any privacy-related questions, email us at shreyiitkgp96@gmail.com
